@@ -1,19 +1,18 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./composants/Navbar";
-import Footer from "./composants/Footer";
-import Blog from "./pages/Blog/Blog";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
-import "./App.css";
-import { Provider } from "./context/context";
-import Todo from "./pages/Todo/Todo";
-import AddContacts from "./pages/AddContacts/AddContacts";
-import AddContact from "./composants/contact/AddContact";
-import APropos from "./composants/contact/pages/APropos";
-import Erreur from "./composants/contact/pages/Erreur";
-import ContactNav from "./composants/contact/ContactNav";
-import Compteur from "./pages/Compteur/Compteur";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Navbar from './composants/Navbar'
+import Footer from './composants/Footer'
+import Blog from './pages/Blog/Blog'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min'
+import './App.css'
+import { Provider } from './context/context'
+import Todo from './pages/Todo/Todo'
+import AddContacts from './pages/AddContacts/AddContacts'
+import AddContact from './composants/contact/AddContact'
+import APropos from './composants/contact/pages/APropos'
+import Erreur from './composants/contact/pages/Erreur'
+import ContactNav from './composants/contact/ContactNav'
+import Compteur from './pages/Compteur/Compteur'
 
 function App() {
   return (
@@ -37,7 +36,7 @@ function App() {
         </BrowserRouter>
       </div>
     </Provider>
-  );
+  )
 }
 
-export default App;
+export default App

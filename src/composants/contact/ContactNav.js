@@ -1,5 +1,4 @@
-import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet } from 'react-router-dom'
 
 export default function ContactNav() {
   return (
@@ -21,5 +20,5 @@ export default function ContactNav() {
       </Link>
       <Outlet />
     </div>
-  );
+  )
 }

@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import Contact from "./Contact";
-import { Consumer } from "../../context/context";
+import { Component } from 'react'
+import Contact from './Contact'
+import { Consumer } from '../../context/context'
 
 class Liste extends Component {
   componentDidMount() {
-    console.log("Le composant est bien assemblé: Did Mount");
+    console.log('Le composant est bien assemblé: Did Mount')
   }
 
   render() {
@@ -25,11 +25,11 @@ class Liste extends Component {
                 />
               ))}
             </>
-          );
+          )
         }}
       </Consumer>
-    );
+    )
   }
 }
 
-export default Liste;
+export default Liste

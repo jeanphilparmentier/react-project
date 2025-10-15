@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import axios from "axios";
-import "./NvPost.css";
-import { Consumer } from "../../../context/context";
-import { v1 as uuid } from "uuid";
+import React, { Component } from 'react'
+import axios from 'axios'
+import './NvPost.css'
+import { Consumer } from '../../../context/context'
+import { v1 as uuid } from 'uuid'
 
 class NvPost extends Component {
   state = {
-    title: "",
-    content: "",
-    author: "Hugo",
-  };
+    title: '',
+    content: '',
+    author: 'Hugo',
+  }
 
   postArticle = (dispatch, e) => {
     const nvPost = {
@@ -18,24 +18,24 @@ class NvPost extends Component {
       title: this.state.title,
       body: this.state.content,
       auteur: this.state.author,
-    };
+    }
 
     // On simule le fait de pouvoir poster (mais ça ne sera pas enregistré dans l'api)
     axios
-      .post("https://jsonplaceholder.typicode.com/posts", nvPost)
-      .then((reponse) => {
+      .post('https://jsonplaceholder.typicode.com/posts', nvPost)
+      .then((response) => {
         // console.log(reponse)
-      });
+      })
     this.setState({
-      title: "",
-      content: "",
-      author: "Hugo",
-    });
+      title: '',
+      content: '',
+      author: 'Hugo',
+    })
     this.setState((state) => ({
       posts: (state.posts = [nvPost]),
-    }));
-    dispatch({ type: "ADD_POST", payload: nvPost });
-  };
+    }))
+    dispatch({ type: 'ADD_POST', payload: nvPost })
+  }
 
   render() {
     return (
@@ -81,11 +81,11 @@ class NvPost extends Component {
                 Ajouter un Article
               </button>
             </div>
-          );
+          )
         }}
       </Consumer>
-    );
+    )
   }
 }
 
-export default NvPost;
+export default NvPost

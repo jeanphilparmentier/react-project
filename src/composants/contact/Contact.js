@@ -1,24 +1,24 @@
-import React, { Component } from "react";
-import { Consumer } from "../../context/context";
+import React, { Component } from 'react'
+import { Consumer } from '../../context/context'
 
 class Contact extends Component {
   componentDidMount() {
-    console.log("Le composant s est mis à jour");
+    console.log('Le composant s est mis à jour')
   }
 
   state = {
     show: false,
-  };
+  }
 
   supprimeContacte = (id, dispatch) => {
-    dispatch({ type: "DELETE_CONTACT", payload: id });
+    dispatch({ type: 'DELETE_CONTACT', payload: id })
     // this.props.supprimeClick()
-  };
+  }
   montrerContact = () => {
     this.setState({
       show: !this.state.show,
-    });
-  };
+    })
+  }
   render() {
     return (
       <Consumer>
@@ -26,15 +26,15 @@ class Contact extends Component {
           return (
             <div className="card card-body mb-3 text-center">
               <h4>
-                {this.props.nom}&nbsp;{" "}
+                {this.props.nom}&nbsp;{' '}
                 <i
-                  style={{ cursor: "pointer" }}
+                  style={{ cursor: 'pointer' }}
                   className="fas fa-sort-down"
                   onClick={this.montrerContact}
                 ></i>
                 <i
                   className="fas fa-times"
-                  style={{ cursor: "pointer", float: "right", color: "red" }}
+                  style={{ cursor: 'pointer', float: 'right', color: 'red' }}
                   onClick={() =>
                     this.supprimeContacte(this.props.id, value.dispatch)
                   }
@@ -51,11 +51,11 @@ class Contact extends Component {
                 </ul>
               ) : null}
             </div>
-          );
+          )
         }}
       </Consumer>
-    );
+    )
   }
 }
 
-export default Contact;
+export default Contact

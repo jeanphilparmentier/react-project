@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import NvPost from "../../composants/Blog/NvPost/NvPost";
-import PostModale from "../../composants/Blog/PostModale/PostModale";
-import "./Blog.css";
-import Post from "../../composants/Blog/Post/Post";
-import { Consumer } from "../../context/context";
+import React, { Component } from 'react'
+import NvPost from '../../composants/Blog/NvPost/NvPost'
+import PostModale from '../../composants/Blog/PostModale/PostModale'
+import './Blog.css'
+import Post from '../../composants/Blog/Post/Post'
+import { Consumer } from '../../context/context'
 
 class Blog extends Component {
   state = {
@@ -11,17 +11,17 @@ class Blog extends Component {
     selectPostId: null,
     toggle: false,
     selectPostApi: null,
-  };
+  }
 
   selectId = (id) => {
-    this.setState({ selectPostId: id });
-    this.setState({ toggle: true });
-    this.setState({ selectPostApi: id + 1 });
-  };
+    this.setState({ selectPostId: id })
+    this.setState({ toggle: true })
+    this.setState({ selectPostApi: id + 1 })
+  }
 
   toggleModale = () => {
-    this.setState({ toggle: false });
-  };
+    this.setState({ toggle: false })
+  }
 
   render() {
     const posts = this.state.posts.map((post) => {
@@ -32,8 +32,8 @@ class Blog extends Component {
           titre={post.title}
           clicked={() => this.selectId(post.id)}
         />
-      );
-    });
+      )
+    })
 
     return (
       <Consumer>
@@ -63,11 +63,11 @@ class Blog extends Component {
                   ))}
               </section>
             </div>
-          );
+          )
         }}
       </Consumer>
-    );
+    )
   }
 }
 
-export default Blog;
+export default Blog

@@ -1,22 +1,21 @@
 .NvPost {
-    background: #F3E0BE;
-    max-width: 700px;
-    min-width: 400px;
-    text-align: center;
-    margin: 0 auto;
+  background: #f3e0be;
+  max-width: 700px;
+  min-width: 400px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .NvPost label {
-    display: block;
-    margin: 10px auto;
-    text-align: center;
-    font-weight: bold;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  font-weight: bold;
 }
 
 .NvPost input,
 .NvPost textarea,
 .NvPost select {
-    width: 90%;
-    margin: auto;
+  width: 90%;
+  margin: auto;
 }
-

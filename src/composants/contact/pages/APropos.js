@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function APropos() {
   return (
     <>
@@ -9,5 +7,5 @@ export default function APropos() {
         imbriquées en utilisant Outlet de React Rooter
       </p>
     </>
-  );
+  )
 }

@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 export default function FooterMain() {
-  const currYear = new Date().getFullYear();
+  const currYear = new Date().getFullYear()
   return (
     <footer className="bg-gray-800 p-8 relative z-0">
       <div className="flex">
@@ -84,5 +84,5 @@ export default function FooterMain() {
         © {currYear} Jean-Philippe Parmentier - All right reserved
       </p>
     </footer>
-  );
+  )
 }

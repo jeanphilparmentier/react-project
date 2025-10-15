@@ -1,10 +1,9 @@
-import React from "react";
-import Liste from "../../composants/contact/Liste";
+import Liste from '../../composants/contact/Liste'
 
 export default function AddContacts() {
   return (
     <>
       <Liste />
     </>
-  );
+  )
 }

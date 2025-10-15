@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import axios from "axios";
-import "./PostModale.css";
-import { Consumer } from "../../../context/context";
+import React, { Component } from 'react'
+import axios from 'axios'
+import './PostModale.css'
+import { Consumer } from '../../../context/context'
 
 class PostModale extends Component {
   state = {
     loadedPost: null,
-  };
+  }
 
   componentDidUpdate() {
     // Pourquoi inférieure ou égale à 3? Pour garder un exemple
@@ -18,12 +18,12 @@ class PostModale extends Component {
         (this.state.loadedPost && this.state.loadedPost.id !== this.props.api)
       ) {
         axios
-          .get("https://jsonplaceholder.typicode.com/posts/" + this.props.api)
+          .get('https://jsonplaceholder.typicode.com/posts/' + this.props.api)
           .then((response) => {
             this.setState({
               loadedPost: response.data,
-            });
-          });
+            })
+          })
       }
     }
   }
@@ -34,7 +34,6 @@ class PostModale extends Component {
         <div className="PostComplet">
           <h1>{this.state.loadedPost.title}</h1>
           <p>{this.state.loadedPost.body}</p>
-
           <button
             className="btn btn-danger my-3 btnPost"
             onClick={this.props.cache}
@@ -42,7 +41,7 @@ class PostModale extends Component {
             Fermer
           </button>
         </div>
-      ) : null;
+      ) : null
     } else if (this.props.api) {
       return (
         <Consumer>
@@ -51,7 +50,6 @@ class PostModale extends Component {
               <div className="PostComplet">
                 <h1>{value.objPosts.posts[this.props.id].title}</h1>
                 <p>{value.objPosts.posts[this.props.id].body}</p>
-
                 <button
                   className="btn btn-danger my-3 btnPost"
                   onClick={this.props.cache}
@@ -59,13 +57,13 @@ class PostModale extends Component {
                   Fermer
                 </button>
               </div>
-            ) : null;
+            ) : null
           }}
         </Consumer>
-      );
+      )
     } else {
-      return null;
+      return null
     }
   }
 }
-export default PostModale;
+export default PostModale

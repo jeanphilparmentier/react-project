@@ -1,32 +1,32 @@
-import React, { Component } from "react";
+import { Component } from 'react'
 
 class Todo extends Component {
   state = {
-    element: "",
+    element: '',
     items: [],
-  };
+  }
 
   onChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
-    });
-  };
+    })
+  }
 
   onSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     this.setState({
-      element: "",
+      element: '',
       items: [...this.state.items, { element: this.state.element }],
-    });
-  };
+    })
+  }
 
   deleteItem = (index) => {
-    const arr = this.state.items;
-    arr.splice(index, 1);
+    const arr = this.state.items
+    arr.splice(index, 1)
     this.setState({
       items: arr,
-    });
-  };
+    })
+  }
 
   renderTodo = () => {
     return this.state.items.map((item, index) => {
@@ -37,15 +37,15 @@ class Todo extends Component {
               {item.element}
               <i
                 className="fas fa-times"
-                style={{ cursor: "pointer", float: "right", color: "red" }}
+                style={{ cursor: 'pointer', float: 'right', color: 'red' }}
                 onClick={() => this.deleteItem(index)}
               ></i>
             </h4>
           </div>
         </div>
-      );
-    });
-  };
+      )
+    })
+  }
 
   render() {
     return (
@@ -73,8 +73,8 @@ class Todo extends Component {
         </div>
         {this.renderTodo()}
       </div>
-    );
+    )
   }
 }
 
-export default Todo;
+export default Todo

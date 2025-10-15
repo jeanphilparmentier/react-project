@@ -1,34 +1,34 @@
-import React, { Component } from "react";
-import { Consumer } from "../../context/context";
+import React, { Component } from 'react'
+import { Consumer } from '../../context/context'
 
-import { v1 as uuid } from "uuid";
+import { v1 as uuid } from 'uuid'
 
 class AddContact extends Component {
   state = {
-    nom: "",
-    email: "",
-    tel: "",
-  };
+    nom: '',
+    email: '',
+    tel: '',
+  }
 
-  onChange = (e) => this.setState({ [e.target.name]: e.target.value });
+  onChange = (e) => this.setState({ [e.target.name]: e.target.value })
 
   onSubmit = (dispatch, e) => {
-    e.preventDefault();
+    e.preventDefault()
     const newContact = {
       id: uuid(),
       nom: this.state.nom,
       email: this.state.email,
       tel: this.state.tel,
-    };
-    dispatch({ type: "ADD_CONTACT", payload: newContact });
+    }
+    dispatch({ type: 'ADD_CONTACT', payload: newContact })
 
     this.setState({
-      nom: "",
-      email: "",
-      tel: "",
-    });
+      nom: '',
+      email: '',
+      tel: '',
+    })
     // this.props.history.push('/')
-  };
+  }
 
   render() {
     return (
@@ -80,11 +80,11 @@ class AddContact extends Component {
                 </form>
               </div>
             </div>
-          );
+          )
         }}
       </Consumer>
-    );
+    )
   }
 }
 
-export default AddContact;
+export default AddContact
