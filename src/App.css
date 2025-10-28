@@ -129,3 +129,12 @@ footer a {
 .border-b {
   border-bottom-width: 1px;
 }
+.wide-screen {
+  margin-top: 150px;
+  min-height: 500px;
+}
+@media screen and (max-width: 1200px) {
+  .wide-screen {
+    min-height: 60px !important;
+  }
+}

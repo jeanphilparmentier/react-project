@@ -49,7 +49,7 @@ class Todo extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container wide-screen">
         <div className="card my-3">
           <div className="card-header">To-Do List</div>
           <div className="card-body">
